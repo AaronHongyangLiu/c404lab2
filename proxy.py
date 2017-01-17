@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+
+# from github: https://github.com/joshua2ua
 import socket
 import os, sys, select
 serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -66,7 +68,7 @@ while True:
             print response
         select.select(
             [incomingSocket, clientSocket], #read
-            []                              #write
+            [],                             #write
             [incomingSocket, clientSocket], #exceptions
             1.0                             #timeout
         )
